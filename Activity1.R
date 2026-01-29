@@ -48,4 +48,13 @@ fahrenheit <- celsius * 9/5 + 32
 
 #homework ----
 
+#Question 1
+#converting elevation from ft to meters
+highPeaks_df$Elevation_ft <- highPeaks_df$Elevation_ft * 0.3048
+#updating the title of the column
+colnames(highPeaks_df)[colnames(highPeaks_df) == "Elevation_ft"] <- "Elevation_meters"
 
+#Question 3
+#creates longest_trip variable which stores the row with the longest round trip
+longest_trip <- highPeaks_df[highPeaks_df$Round_trip_length_mi == 
+                               max(highPeaks_df$Round_trip_length_mi),]
